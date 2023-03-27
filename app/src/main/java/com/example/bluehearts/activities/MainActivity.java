@@ -1,8 +1,10 @@
-package com.example.bluehearts;
+package com.example.bluehearts.activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+
+import com.example.bluehearts.R;
 
 public class MainActivity extends AppCompatActivity {
 
