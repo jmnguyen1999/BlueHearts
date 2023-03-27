@@ -133,7 +133,7 @@ public class SignUpFragment extends Fragment {
                 // Here you should tell the user to verify the e-mail
                 Toast.makeText(getContext(), "Successfully signed up!", Toast.LENGTH_SHORT).show();
                 Log.d(TAG, "Sign up successful");
-                //attemptLogin(username, password);
+                attemptLogin(username, password);
             } else {
                 Log.e(TAG, "user sign up failed.", e);
                 //If error = email invalid format --> show corresponding toast

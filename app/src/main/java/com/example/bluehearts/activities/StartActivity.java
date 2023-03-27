@@ -78,7 +78,7 @@ public class StartActivity extends AppCompatActivity implements LoginFragment.Lo
 
     @Override
     public void onSuccessfulSignUp() {
-
+        toMainActivity();
     }
 
 

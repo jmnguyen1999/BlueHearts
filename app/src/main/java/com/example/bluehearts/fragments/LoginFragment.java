@@ -85,6 +85,9 @@ public class LoginFragment extends Fragment {
                 if(!(username.isEmpty() && password.isEmpty())){
                     login(username, password);
                 }
+                else{
+                    Toast.makeText(getContext(), "Please fill out all the inputs.", Toast.LENGTH_SHORT).show();
+                }
             }
         });
 
