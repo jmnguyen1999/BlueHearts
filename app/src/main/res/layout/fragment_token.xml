@@ -5,10 +5,54 @@
     android:layout_height="match_parent"
     tools:context=".fragments.TokenFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <LinearLayout
+        android:id="@+id/LLBalanceContainer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="false"
+        android:layout_centerHorizontal="true"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="50dp"
+            android:text="BlueHeart Balance"
+            android:textAlignment="textStart"
+            android:textColor="#2196F3"
+            android:textSize="30sp" />
+
+        <TextView
+            android:id="@+id/tvBalanceValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvTitle"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="30dp"
+            android:text="5"
+            android:textAlignment="center"
+            android:textSize="65sp" />
+
+        <TextView
+            android:id="@+id/tvTokenText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvBalanceValue"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:text="Tokens" />
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvTokenHistory"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="View your BlueHeart Token balance here." />
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/LLBalanceContainer"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="0dp" />
 
 </RelativeLayout>

@@ -26,6 +26,9 @@ public class User extends ParseUser {
     public void setLname(String lName){
         put(KEY_LNAME, lName);
     }
+    public void setTokenBalance(int newBalance){
+        put(KEY_TOKENBALANCE, newBalance);
+    }
 
     //Getters:
     public int getTokenBalance(){

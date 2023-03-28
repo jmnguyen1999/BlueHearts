@@ -13,6 +13,8 @@ public class Report extends ParseObject {
     public static final String KEY_THEMES = "themes";
     public static final String KEY_TITLE= "title";
     public static final String KEY_CREATEDAT = "createdAt";
+    public static final String KEY_USERID = "userId";
+    public static final String KEY_TOKENWORTH = "tokenWorth";
 
     public Report(){}
     //Setters: --> to initialize a local Report object + can use to save in Parse:
@@ -26,9 +28,14 @@ public class Report extends ParseObject {
         put(KEY_DESCRIPTION, description);
     }
     public void setThemes(List<String> themes){
-        put(KEY_TITLE, themes);
+        put(KEY_THEMES, themes);
     }
-
+    public void setUserId(String userId){
+        put(KEY_USERID, userId);
+    }
+    public void setTokenWorth(int tokenWorth){
+        put(KEY_TOKENWORTH, tokenWorth);
+    }
     //Getters --> to show Reports
     public List<ParseFile> getImages(){
         return getList(KEY_IMAGES);

@@ -42,4 +42,7 @@ dependencies {
 
     //For Parse Server:
     implementation "com.github.parse-community.Parse-SDK-Android:parse:1.18.5"
+
+    //For multiSelectSpinner for choosing multiple themes:
+    implementation 'com.github.puskal-khadka:MultiSelectSpinner:1.0.1'
 }
