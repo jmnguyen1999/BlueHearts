@@ -14,26 +14,28 @@
             android:id="@+id/LLTitleContainer"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="15dp"
-            android:layout_marginTop="10dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="15dp"
             android:orientation="vertical">
 
             <TextView
                 android:id="@+id/tvMainTitle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Report an Activity"
-                android:textColor="#2196F3"
-                android:textSize="30sp"
+                android:fontFamily="@font/main_p2_font"
+                android:text="Report the Data"
+                android:textColor="@color/blue"
+                android:textSize="35sp"
                 android:textStyle="bold" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/tvMainTitle"
-                android:fontFamily="sans-serif"
+                android:fontFamily="@font/secondary_font"
                 android:text="Earn more tokens!"
-                android:textSize="14sp"
+                android:textColor="@color/dark_gray"
+                android:textSize="16sp"
                 android:textStyle="italic" />
         </LinearLayout>
 
@@ -41,11 +43,16 @@
             android:id="@+id/LLFormContainer"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="30dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginRight="30dp"
             android:layout_below="@id/LLTitleContainer"
-            android:orientation="vertical">
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="30dp"
+            android:background="@drawable/rounded_corners"
+            android:orientation="vertical"
+            android:paddingLeft="10dp"
+            android:paddingTop="10dp"
+            android:paddingRight="10dp"
+            android:paddingBottom="20dp">
 
             <LinearLayout
                 android:id="@+id/LLTitleInput"
@@ -55,13 +62,16 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:fontFamily="@font/main_font"
                     android:text="Title: "
+                    android:textColor="@color/dark_blue"
                     android:textStyle="bold" />
 
                 <EditText
                     android:id="@+id/etTitleInput"
                     android:layout_width="fill_parent"
                     android:layout_height="match_parent"
+                    android:layout_marginLeft="5dp"
                     android:hint="Enter title of report"
                     android:textSize="14sp" />
             </LinearLayout>
@@ -71,21 +81,22 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/LLTitleInput"
-                android:orientation="vertical"
-                android:layout_marginTop="10dp">
+                android:layout_marginTop="10dp"
+                android:orientation="vertical">
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:fontFamily="@font/main_font"
                     android:text="Description: "
+                    android:textColor="@color/dark_blue"
                     android:textStyle="bold" />
 
                 <EditText
                     android:id="@+id/etDescriptionInput"
                     android:layout_width="match_parent"
-                    android:layout_height="100dp"
-                    android:layout_marginLeft="20dp"
-                    android:layout_marginRight="20dp"
+                    android:layout_height="50dp"
+
                     android:hint="Enter description"
                     android:lines="3"
                     android:singleLine="false"
@@ -98,14 +109,24 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/LLDescriptionInput"
-                android:layout_marginTop="15dp">
+                android:layout_marginTop="15dp"
+                android:orientation="vertical">
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:fontFamily="@font/main_font"
                     android:text="Categories applicable to: "
+                    android:textColor="@color/dark_blue"
                     android:textStyle="bold" />
 
+                <EditText
+                    android:id="@+id/tvCategoryList"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Enter themes"
+                    android:textSize="14sp" />
+                <!--
                 <TextView
                     android:id="@+id/tvCategoryList"
                     android:layout_width="match_parent"
@@ -113,9 +134,11 @@
                     android:layout_centerInParent="true"
                     android:background="@android:drawable/editbox_background"
                     android:drawableRight="@android:drawable/arrow_down_float"
-                    android:drawablePadding="16dp"
+                    android:drawablePadding="10dp"
                     android:hint="Select Categories"
-                    android:padding="12dp" />
+                    android:padding="10dp"
+                    android:textColorHighlight='android:textSize="16sp"' />
+                    -->
             </LinearLayout>
 
             <LinearLayout
@@ -123,13 +146,16 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/LLThemesInput"
-                android:orientation="vertical"
-                android:layout_marginTop="15dp">
+                android:layout_marginTop="15dp"
+                android:orientation="vertical">
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Upload pictures (optional): "
+                    android:fontFamily="@font/main_font"
+                    android:text="Upload images: "
+                    android:textColor="@color/dark_blue"
+                    android:textSize="14sp"
                     android:textStyle="bold" />
 
                 <RelativeLayout
@@ -140,21 +166,31 @@
 
                     <ImageView
                         android:id="@+id/ivImages"
-                        android:layout_width="170dp"
-                        android:layout_height="170dp"
+                        android:layout_width="160dp"
+                        android:layout_height="150dp"
                         android:layout_centerInParent="true"
-                        android:background="#283C3535" />
+                        android:background="@drawable/iv_rounded" />
 
                     <ImageView
                         android:id="@+id/ivAddPhotos"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
                         android:layout_centerInParent="true"
                         android:src="@android:drawable/ic_menu_add" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="20dp"
+                        android:fontFamily="@font/secondary_font"
+                        android:text="Import images here.."
+                        android:textAlignment="center" />
                 </RelativeLayout>
             </LinearLayout>
 
         </LinearLayout>
+
 
         <Button
             android:id="@+id/btnSubmit"
@@ -162,8 +198,9 @@
             android:layout_height="wrap_content"
             android:layout_below="@id/LLFormContainer"
             android:layout_centerHorizontal="true"
-            android:layout_marginTop="26dp"
+            android:layout_marginTop="40dp"
             android:layout_marginBottom="100dp"
+            android:backgroundTint="@color/purple_blue"
             android:text="Submit" />
 
     </RelativeLayout>

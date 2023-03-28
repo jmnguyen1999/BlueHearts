@@ -6,51 +6,83 @@
     android:layout_height="match_parent"
     tools:context=".fragments.LoginFragment">
 
-    <TextView
-        android:id="@+id/tvTitle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+    <ImageView
+        android:layout_width="300dp"
+        android:layout_height="200dp"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="130dp"
-        android:fontFamily="sans-serif-condensed"
-        android:text="Log in"
-        android:textAlignment="center"
-        android:textColor="#2196F3"
-        android:textSize="42sp" />
+        android:layout_marginTop="200dp"
+        app:srcCompat="@drawable/logo_transparent" />
+
+    <LinearLayout
+        android:id="@+id/tvTitle"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="60dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="false"
+            android:fontFamily="@font/main_p2_font"
+            android:text="Blue Hearts Network"
+            android:textAlignment="center"
+            android:textAllCaps="false"
+            android:textColor="@color/dark_blue"
+            android:textSize="40sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
 
     <EditText
         android:id="@+id/etUsername"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="250dp"
+        android:layout_height="30dp"
         android:layout_below="@id/tvTitle"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="70dp"
+        android:layout_marginTop="100dp"
+        android:background="@drawable/rouned_corners"
         android:ems="10"
-        android:hint="Username/Email"
-        android:inputType="textPersonName" />
+        android:fontFamily="@font/secondary_font"
+        android:hint="username"
+        android:inputType="textPersonName"
+        android:paddingStart="10dp"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:textColor="@color/white"
+        android:textColorHint="@color/dark_blue"
+        android:textSize="18sp" />
 
     <EditText
         android:id="@+id/etPassword"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="250dp"
+        android:layout_height="30dp"
         android:layout_below="@+id/etUsername"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="25dp"
+        android:background="@drawable/rouned_corners"
         android:ems="10"
-        android:hint="Password"
+        android:fontFamily="@font/secondary_font"
+        android:hint="password"
         android:inputType="textPersonName"
-        android:password="true" />
+        android:paddingStart="10dp"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:textColor="@color/white"
+        android:textColorHint="@color/dark_blue"
+        android:textSize="18sp"
+        android:password="true"/>
 
     <Button
         android:id="@+id/btnSubmit"
-        android:layout_width="110dp"
-        android:layout_height="40dp"
+        android:layout_width="90dp"
+        android:layout_height="50dp"
         android:layout_below="@+id/etPassword"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="70dp"
-        android:background="#2196F3"
-        android:backgroundTint="#03A9F4"
+        android:backgroundTint="#838383"
         android:text="Log in"
         android:textColor="@color/white" />
 
@@ -63,9 +95,12 @@
         android:layout_alignParentEnd="false"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="75dp"
-        android:text="Click here to sign up!"
+        android:fontFamily="@font/secondary_font"
+        android:text="Click here to join the cause!"
         android:textAlignment="center"
         android:textColor="#E1F32140" />
+
+
 
 
 </RelativeLayout>

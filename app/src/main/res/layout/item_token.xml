@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     android:orientation="vertical">
 
     <View
@@ -14,26 +14,44 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/dividerLine"
-        android:layout_marginLeft="10dp"
+        android:layout_marginLeft="20dp"
         android:layout_marginTop="5dp"
-        android:layout_marginRight="5dp">
+        android:layout_marginRight="20dp">
 
-
-        <TextView
-            android:id="@+id/tvTokenValue"
+        <LinearLayout
+            android:id="@+id/LLTokenTitle"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="5dp"
-            android:text="2 Tokens earned/spent"
-            android:textSize="16sp"
-            android:textStyle="bold" />
+            android:layout_height="40dp">
+
+            <TextView
+                android:id="@+id/tvTokenValue"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:fontFamily="@font/main_p2_font"
+                android:gravity="center"
+                android:text="2"
+                android:textColor="@color/dark_blue"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="match_parent"
+                android:fontFamily="@font/main_p2_font"
+                android:gravity="center"
+                android:text=" Tokens earned."
+                android:textSize="16sp"
+                android:textColor="@color/dark_blue" />
+        </LinearLayout>
 
         <TextView
             android:id="@+id/tvTimestamp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/tvTokenValue"
+            android:layout_below="@id/LLTokenTitle"
+            android:layout_marginTop="-5dp"
+            android:fontFamily="@font/secondary_font"
             android:text="02/23/23"
+            android:textColor="@android:color/darker_gray"
             android:textSize="12sp" />
 
         <TextView
@@ -42,7 +60,11 @@
             android:layout_height="wrap_content"
             android:layout_below="@id/tvTimestamp"
             android:layout_marginTop="10dp"
-            android:text="Picked up 3 litter at Pismo Beach!!" />
+            android:fontFamily="@font/main_font"
+            android:text="Picked up 3 litter at Pismo Beach!!"
+            android:textAllCaps="false"
+            android:layout_marginBottom="10dp"
+            android:textColor="@color/blue" />
 
     </RelativeLayout>
 

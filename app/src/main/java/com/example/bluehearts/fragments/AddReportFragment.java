@@ -2,6 +2,7 @@ package com.example.bluehearts.fragments;
 
 import android.Manifest;
 import android.app.Activity;
+import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.PackageManager;
@@ -55,6 +56,7 @@ import java.util.List;
 import java.util.Random;
 
 import models.Report;
+import models.Token;
 import models.User;
 
 
@@ -214,6 +216,8 @@ public class AddReportFragment extends Fragment {
             }
         });
 
+
+
     }
 
     //Purpose:  "Algorithm" invoked to determine how make tokens should be rewarded to the user based on the report. This just randomly picks a value from given range
@@ -235,6 +239,22 @@ public class AddReportFragment extends Fragment {
                 }
                 else{
                     Log.e(TAG, "User's tokenBalance couldn't be updated", e);
+                }
+            }
+        });
+
+        Token token = new Token();
+        token.setValue(earnedTokens);
+        token.setUserId(pUser.getObjectId());
+        token.setReport(report);
+        token.saveInBackground(new SaveCallback() {
+            @Override
+            public void done(ParseException e) {
+                if(e == null){
+                    Log.d(TAG, "new Token created successful");
+                }
+                else{
+                    Log.e(TAG, "new token not created successfully", e);
                 }
             }
         });
@@ -276,4 +296,6 @@ public class AddReportFragment extends Fragment {
         // Return the file target for the photo based on filename
         return new File(pathToDirectory.getPath() + File.separator + fileName);             //Make a file in this path! Named whatever name was passed in
     }
+
+
 }

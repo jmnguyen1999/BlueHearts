@@ -40,4 +40,7 @@ public class Report extends ParseObject {
     public List<ParseFile> getImages(){
         return getList(KEY_IMAGES);
     }
+    public String getTitle(){
+        return getString(KEY_TITLE);
+    }
 }

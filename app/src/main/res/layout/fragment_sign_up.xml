@@ -1,97 +1,254 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:tools="http://schemas.android.com/tools">
+
+<RelativeLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".fragments.SignUpFragment">
 
-    <TextView
-        android:id="@+id/tvTitle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+    <ImageView
+        android:layout_width="357dp"
+        android:layout_height="135dp"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
+        android:layout_marginTop="250dp"
+        app:srcCompat="@drawable/logo_transparent" />
+    <LinearLayout
+        android:id="@+id/tvTitle"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
         android:layout_marginTop="60dp"
-        android:fontFamily="sans-serif-condensed"
-        android:text="Join the Blue Hearts Network"
-        android:textAlignment="center"
-        android:textColor="#2196F3"
-        android:textSize="35sp" />
+        android:orientation="vertical">
 
-    <EditText
-        android:id="@+id/etFname"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/tvTitle"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="70dp"
-        android:ems="10"
-        android:hint="Enter first name"
-        android:inputType="textPersonName" />
-    <EditText
-        android:id="@+id/etLname"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/etFname"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="10dp"
-        android:ems="10"
-        android:hint="Enter last name"
-        android:inputType="textPersonName" />
-    <EditText
-        android:id="@+id/etUsername"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/etLname"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="10dp"
-        android:ems="10"
-        android:hint="Enter username"
-        android:inputType="textPersonName" />
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="false"
+            android:fontFamily="@font/main_p2_font"
+            android:text="The"
+            android:textAlignment="center"
+            android:textColor="@color/dark_blue"
+            android:textSize="25sp" />
 
-    <EditText
-        android:id="@+id/etEmail"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/etUsername"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="10dp"
-        android:ems="10"
-        android:hint="Enter Email"
-        android:inputType="textPersonName" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="false"
+            android:fontFamily="@font/main_p2_font"
+            android:text="Blue Hearts Network"
+            android:textAlignment="center"
+            android:textAllCaps="true"
+            android:textColor="@color/dark_blue"
+            android:textSize="40sp"
+            android:textStyle="bold" />
 
-    <EditText
-        android:id="@+id/etPassword"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/etEmail"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="10dp"
-        android:ems="10"
-        android:hint="Enter password"
-        android:inputType="textPersonName"
-        android:password="true" />
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/main_font"
+            android:text="Become a Protector"
+            android:textAlignment="center"
+            android:textSize="18sp" />
+    </LinearLayout>
 
-    <EditText
-        android:id="@+id/etConfirmPassword"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:id="@+id/LLFormContainer"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/etPassword"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="10dp"
-        android:ems="10"
-        android:hint="Confirm password"
-        android:inputType="textPersonName"
-        android:password="true" />
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginRight="30dp"
+        android:orientation="vertical"
+        android:layout_below="@id/tvTitle">
+
+        <LinearLayout
+            android:id="@+id/LLFname"
+            android:layout_width="match_parent"
+            android:layout_height="50dp">
+
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/main_p2_font"
+                android:text="First name: "
+                android:textColor="@color/blue"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/etFname"
+                android:layout_width="fill_parent"
+                android:layout_height="match_parent"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="10dp"
+                android:background="@android:color/transparent"
+                android:fontFamily="@font/secondary_font"
+                android:hint="Enter first name"
+                android:inputType="textPersonName"
+                android:textColor="@color/dark_blue"
+                android:textSize="16sp" />
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/LLLname"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@id/LLFname">
+
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/main_p2_font"
+                android:text="Last name: "
+                android:textColor="@color/blue"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/etLname"
+                android:layout_width="fill_parent"
+                android:layout_height="match_parent"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="10dp"
+                android:background="@android:color/transparent"
+                android:fontFamily="@font/secondary_font"
+                android:hint="Enter last name"
+                android:inputType="textPersonName"
+                android:textColor="@color/dark_blue"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/LLUsername"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@id/LLLname">
+
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/main_p2_font"
+                android:text="Username:"
+                android:textColor="@color/blue"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/etUsername"
+                android:layout_width="fill_parent"
+                android:layout_height="match_parent"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="10dp"
+                android:background="@android:color/transparent"
+                android:fontFamily="@font/secondary_font"
+                android:hint="Enter username"
+                android:inputType="textPersonName"
+                android:textColor="@color/dark_blue"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/LLEmail"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@id/LLUsername">
+
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/main_p2_font"
+                android:text="Email:"
+                android:textColor="@color/blue"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/etEmail"
+                android:layout_width="fill_parent"
+                android:layout_height="match_parent"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="10dp"
+                android:background="@android:color/transparent"
+                android:fontFamily="@font/secondary_font"
+                android:hint="Enter email"
+                android:inputType="textPersonName"
+                android:textColor="@color/dark_blue"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/LLPassword"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@id/LLEmail">
+
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/main_p2_font"
+                android:text="Password: "
+                android:textColor="@color/blue"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/etPassword"
+                android:layout_width="fill_parent"
+                android:layout_height="match_parent"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="10dp"
+                android:background="@android:color/transparent"
+                android:fontFamily="@font/secondary_font"
+                android:hint="Enter password"
+                android:inputType="textPersonName"
+                android:textColor="@color/dark_blue"
+                android:textSize="16sp"
+                android:password="true"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/LLConfirmPass"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@id/LLPassword">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/main_p2_font"
+                android:text="Re-type password: "
+                android:textColor="@color/blue"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/etConfirmPassword"
+                android:layout_width="fill_parent"
+                android:layout_height="match_parent"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="10dp"
+                android:background="@android:color/transparent"
+                android:fontFamily="@font/secondary_font"
+                android:hint="Confirm password"
+                android:inputType="textPersonName"
+                android:textColor="@color/dark_blue"
+                android:textSize="16sp"
+                android:password="true" />
+        </LinearLayout>
+    </LinearLayout>
 
     <Button
         android:id="@+id/btnSubmit"
         android:layout_width="110dp"
         android:layout_height="40dp"
-        android:layout_below="@+id/etPassword"
+        android:layout_below="@+id/LLFormContainer"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="60dp"
+        android:layout_marginTop="45dp"
         android:background="#2196F3"
         android:backgroundTint="#03A9F4"
         android:text="Sign Up"
@@ -103,9 +260,12 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/btnSubmit"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="200dp"
+        android:fontFamily="@font/secondary_font"
         android:text="Already have an account? Log in here!"
         android:textColor="#E1F32140" />
 
 
 </RelativeLayout>
+</ScrollView>
